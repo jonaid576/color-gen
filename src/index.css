@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,700&display=swap");
+
+:root {
+  --box-shadow-light: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  --box-shadow-dark: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  --transition: all linear 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  background-color: #f9fafc;
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+
+header {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+button {
+  font-family: inherit;
+}
+
+.title {
+  color: #0f172a;
+}
+
+.color-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.color-input {
+  padding: 0.5em 0.3em;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  max-width: 100px;
+}
+
+.color-input.is-error {
+  border: 1px solid red;
+  animation: shake 0.2s linear 3;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(20px);
+  }
+
+  50% {
+    transform: translateX(0px);
+  }
+
+  75% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.color-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.submit-btn {
+  padding: 0.7em 0.5em;
+  border: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-light);
+  transition: var(--transition);
+  border-radius: 0 5px 5px 0;
+  background-color: #99aab5;
+}
+
+.submit-btn:hover {
+  box-shadow: var(--box-shadow-dark);
+}
+
+.error-h3 {
+  text-align: center;
+}
+
+/* SINGLE COLOR */
+/* ============= */
+
+.color-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-article {
+  padding: 1em;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-weight {
+  margin: 0;
+  margin-top: 2em;
+}
+
+.clipboard {
+  font-size: 0.8rem;
+}
+
+.clipboard::first-letter {
+  text-transform: capitalize;
+}
+
+@media (min-width: 800px) {
+  .color-input {
+    max-width: 300px;
+  }
+  .title {
+    margin-bottom: 1em;
+  }
+
+  .color-form {
+    margin-bottom: 4em;
+  }
+}
