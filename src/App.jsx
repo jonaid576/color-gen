@@ -3,6 +3,8 @@ import { useEffect } from "react"
 import { useState } from "react"
 import Values from "values.js"
 import { rgbToHex } from "./utils"
+import colorLogo from "./assets/color_logo.png"
+import colorLogo1 from "./assets/color_logo_1.png"
 const App = () => {
   const [hexValue, setHexValue] = useState("#7289DA")
   const [allColorValues, setAllColorValues] = useState([])
@@ -29,7 +31,10 @@ const App = () => {
   return (
     <main>
       <header>
-        <h1 className="title">color tint & shade generator</h1>
+        <div className="logo-wrapper">
+          <img src={colorLogo1} alt="color logo" className="color-logo" />
+          <h1 className="title">color tint & shade generator</h1>
+        </div>
         <form className="color-form" onSubmit={handleSubmit}>
           <label
             htmlFor="color"

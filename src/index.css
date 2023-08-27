@@ -33,14 +33,31 @@ button {
   font-family: inherit;
 }
 
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
+  gap: 0.5em;
+  /* background-color: yellow; */
+}
+
+.color-logo {
+  width: 45px;
+  /* background-color: red; */
+  /* padding: 1em; */
+}
+
 .title {
   color: #0f172a;
   font-weight: 400;
-  margin-top: 3em;
+  margin: 0;
   font-family: "Special Elite", sans-serif;
   word-spacing: 2px;
   letter-spacing: 1px;
   /* background-color: magenta; */
+  /* margin-top: 3em; */
 }
 
 .color-form {
@@ -55,6 +72,7 @@ button {
 .color-label {
   font-size: 1.2rem;
   font-weight: 700;
+  border-radius: 5px;
 }
 
 .color-input {
@@ -147,11 +165,16 @@ button {
   .color-input {
     max-width: 300px;
   }
-  .title {
-    margin-bottom: 1em;
-  }
-
   .color-form {
     margin-bottom: 4em;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo-wrapper {
+    gap: 0;
+  }
+  .title {
+    font-size: 1.5rem;
   }
 }
